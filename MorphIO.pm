@@ -65,18 +65,26 @@ sub csv {
 	my $uri = URI->new($self->{'web_uri'}.$self->{'project'}.
 		'data.csv?key='.$self->{'api_key'}.'&query='.
 		uri_escape($self->{'select'}));
+	return $self->_save($uri, $output_file);
+}
+
+# Get sqlite file.
+sub sqlite {
+	my ($self, $output_file) = @_;
+	my $uri = URI->new($self->{'web_uri'}.$self->{'project'}.
+		'data.sqlite?key='.$self->{'api_key'});
+	return $self->_save($uri, $output_file);
+}
+
+# Save file.
+sub _save {
+	my ($self, $uri, $output_file) = @_;
 	my $content = get($uri->as_string);
 	if (! $content) {
 		err "Cannot get '".$uri->as_string."'.";
 	}
 	barf($output_file, $content);
 	return;
-}
-
-# Get sqlite file.
-sub sqlite {
-	my ($self, $path) = @_;
-	# TODO
 }
 
 1;
