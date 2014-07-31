@@ -91,3 +91,150 @@ sub _save {
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+MorphIO - Perl class to communication with morph.io.
+
+=head1 SYNOPSIS
+
+ use MorphIO;
+ my $obj = MorphIO->new(%parameters);
+ $obj->csv('output.csv');
+ $obj->sqlite('output.sqlite');
+
+=head1 METHODS
+
+=over 8
+
+=item C<new(%parameters)>
+
+Constructor.
+
+=over 8
+
+=item * C<api_key>
+
+ Morph.io API key.
+ It is required.
+ Default value is undef.
+
+=item * C<project>
+
+ Project.
+ It is required.
+ Default value is undef.
+
+=item * C<select>
+
+ Select.
+ It is usable for csv() method.
+ Default value is 'SELECT * FROM data'.
+
+=item * C<web_uri>
+
+ Web URI of service.
+ Default value is 'https://morph.io/'.
+
+=back
+
+=item C<csv($output_file)>
+
+ Get CSV file and save to output file.
+ It is affected by 'select' parameter.
+ Returns undef.
+
+=item C<sqlite($output_file)>
+
+ Get sqlite file and save to output file.
+ Returns undef.
+
+=back
+
+=head1 ERRORS
+
+ new():
+         Parameter 'api_key' is required.
+         Parameter 'project' is required.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
+
+ csv():
+         Cannot get '%s'.
+
+ sqlite():
+         Cannot get '%s'.
+
+=head1 EXAMPLE
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use File::Temp qw(tempfile);
+ use MorphIO;
+ use Perl6::Slurp qw(slurp);
+
+ # Arguments.
+ if (@ARGV < 2) {
+         print STDERR "Usage: $0 api_key project\n";
+         exit 1;
+ }
+ my $api_key = $ARGV[0];
+ my $project = $ARGV[1];
+
+ # Temp file.
+ my (undef, $temp_file) = tempfile();
+
+ # Object.
+ my $obj = MorphIO->new(
+         'api_key' => $api_key,
+         'project' => $project,
+ );
+
+ # Save CSV file.
+ $obj->csv($temp_file);
+
+ # Print to output.
+ print slurp($temp_file);
+
+ # Clean.
+ unlink $temp_file;
+
+ # Output:
+ # Usage: ./examples/ex1.pl api_key project
+
+=head1 DEPENDENCIES
+
+L<Class::Utils>,
+L<Encode>,
+L<Error::Pure>,
+L<IO::Barf>,
+L<LWP::Simple>,
+L<URI>,
+L<URI::Escape>.
+
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/MorphIO>
+
+=head1 AUTHOR
+
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+BSD license.
+
+=head1 VERSION
+
+0.01
+
+=cut
