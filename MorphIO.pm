@@ -6,6 +6,7 @@ use warnings;
 
 # Modules.
 use Class::Utils qw(set_params);
+use Encode qw(encode_utf8);
 use Error::Pure qw(err);
 use IO::Barf qw(barf);
 use LWP::Simple qw(get);
@@ -83,7 +84,7 @@ sub _save {
 	if (! $content) {
 		err "Cannot get '".$uri->as_string."'.";
 	}
-	barf($output_file, $content);
+	barf($output_file, encode_utf8($content));
 	return;
 }
 
