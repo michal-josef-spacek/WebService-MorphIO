@@ -6,7 +6,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'TODO';
+abstract 'Perl class to communication with morph.io.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'MorphIO';
