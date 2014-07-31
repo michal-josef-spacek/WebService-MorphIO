@@ -22,7 +22,7 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
-	# API key.
+	# Morph.io API key.
 	$self->{'api_key'} = undef;
 
 	# Project.
@@ -31,7 +31,7 @@ sub new {
 	# Select.
 	$self->{'select'} = 'SELECT * FROM data';
 
-	# Web URI.
+	# Web URI of service.
 	$self->{'web_uri'} = 'https://morph.io/';
 
 	# Process params.
@@ -59,7 +59,7 @@ sub new {
 	return $self;
 }
 
-# Get csv.
+# Get CSV file.
 sub csv {
 	my ($self, $output_file) = @_;
 	my $uri = URI->new($self->{'web_uri'}.$self->{'project'}.
