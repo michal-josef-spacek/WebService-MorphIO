@@ -19,3 +19,4 @@ t/WebService-MorphIO/00-use.t
 t/WebService-MorphIO/01-version.t
 t/WebService-MorphIO/02-pod_coverage.t
 t/WebService-MorphIO/03-pod.t
+t/WebService-MorphIO/04-new.t
