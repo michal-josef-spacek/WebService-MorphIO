@@ -9,8 +9,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('MorphIO');
+	use_ok('WebService::MorphIO');
 }
 
 # Test.
-require_ok('MorphIO');
+require_ok('WebService::MorphIO');

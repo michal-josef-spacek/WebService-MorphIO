@@ -1,4 +1,4 @@
-package MorphIO;
+package WebService::MorphIO;
 
 # Pragmas.
 use strict;
@@ -98,12 +98,12 @@ __END__
 
 =head1 NAME
 
-MorphIO - Perl class to communication with morph.io.
+WebService::MorphIO - Perl class to communication with morph.io.
 
 =head1 SYNOPSIS
 
- use MorphIO;
- my $obj = MorphIO->new(%parameters);
+ use WebService::MorphIO;
+ my $obj = WebService::MorphIO->new(%parameters);
  $obj->csv('output.csv');
  $obj->sqlite('output.sqlite');
 
@@ -177,8 +177,8 @@ Constructor.
 
  # Modules.
  use File::Temp qw(tempfile);
- use MorphIO;
  use Perl6::Slurp qw(slurp);
+ use WebService::MorphIO;
 
  # Arguments.
  if (@ARGV < 2) {
@@ -192,7 +192,7 @@ Constructor.
  my (undef, $temp_file) = tempfile();
 
  # Object.
- my $obj = MorphIO->new(
+ my $obj = WebService::MorphIO->new(
          'api_key' => $api_key,
          'project' => $project,
  );
@@ -221,7 +221,7 @@ L<URI::Escape>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/MorphIO>
+L<https://github.com/tupinek/WebService-MorphIO>
 
 =head1 AUTHOR
 

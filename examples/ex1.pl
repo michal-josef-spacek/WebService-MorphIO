@@ -6,8 +6,8 @@ use warnings;
 
 # Modules.
 use File::Temp qw(tempfile);
-use MorphIO;
 use Perl6::Slurp qw(slurp);
+use WebService::MorphIO;
 
 # Arguments.
 if (@ARGV < 2) {
@@ -21,7 +21,7 @@ my $project = $ARGV[1];
 my (undef, $temp_file) = tempfile();
 
 # Object.
-my $obj = MorphIO->new(
+my $obj = WebService::MorphIO->new(
         'api_key' => $api_key,
         'project' => $project,
 );

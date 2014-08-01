@@ -19,7 +19,7 @@ license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: MorphIO
+name: WebService-MorphIO
 no_index:
   directory:
     - examples
@@ -33,8 +33,8 @@ requires:
   URI: 0
   URI::Escape: 0
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MorphIO
-  homepage: https://github.com/tupinek/MorphIO
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=WebService-MorphIO
+  homepage: https://github.com/tupinek/WebService-MorphIO
   license: http://opensource.org/licenses/BSD-3-Clause
-  repository: git://github.com/tupinek/MorphIO
+  repository: git://github.com/tupinek/WebService-MorphIO
 version: 0.01

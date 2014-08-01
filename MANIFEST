@@ -15,7 +15,7 @@ MANIFEST			This list of files
 META.yml
 MorphIO.pm
 README
-t/MorphIO/00-use.t
-t/MorphIO/01-version.t
-t/MorphIO/02-pod_coverage.t
-t/MorphIO/03-pod.t
+t/WebService-MorphIO/00-use.t
+t/WebService-MorphIO/01-version.t
+t/WebService-MorphIO/02-pod_coverage.t
+t/WebService-MorphIO/03-pod.t
