@@ -15,6 +15,7 @@ MANIFEST			This list of files
 META.yml
 MorphIO.pm
 README
+SIGNATURE
 t/WebService-MorphIO/00-use.t
 t/WebService-MorphIO/01-version.t
 t/WebService-MorphIO/02-pod_coverage.t
