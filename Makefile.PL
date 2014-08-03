@@ -17,6 +17,7 @@ requires 'IO::Barf' => 0.07;
 requires 'LWP::Simple' => 0;
 requires 'URI' => 0;
 requires 'URI::Escape' => 0;
+requires 'perl' => '5.6.2';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=WebService-MorphIO';
 resources 'homepage' => 'https://github.com/tupinek/WebService-MorphIO';
