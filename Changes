@@ -1,6 +1,7 @@
 0.03
  - Remove diacritics from author name.
  - Update Module::Install to 1.16 version.
+ - Update copyright years.
 
 0.02 2014-08-12T09:18:20+02:00
  - Add minimal perl version.
