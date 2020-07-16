@@ -11,7 +11,7 @@ use LWP::Simple qw(get);
 use URI;
 use URI::Escape qw(uri_escape);
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 # Constructor.
 sub new {
@@ -233,6 +233,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.04
+0.05
 
 =cut
