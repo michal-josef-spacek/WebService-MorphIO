@@ -100,6 +100,7 @@ WebService::MorphIO - Perl class to communication with morph.io.
 =head1 SYNOPSIS
 
  use WebService::MorphIO;
+
  my $obj = WebService::MorphIO->new(%parameters);
  $obj->csv('output.csv');
  $obj->sqlite('output.sqlite');
