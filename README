@@ -98,7 +98,7 @@ DEPENDENCIES
     URI::Escape.
 
 REPOSITORY
-    <https://github.com/tupinek/WebService-MorphIO>
+    <https://github.com/michal-josef-spacek/WebService-MorphIO>
 
 AUTHOR
     Michal Josef Špaček <mailto:skim@cpan.org>

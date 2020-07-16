@@ -216,7 +216,7 @@ L<URI::Escape>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/WebService-MorphIO>
+L<https://github.com/michal-josef-spacek/WebService-MorphIO>
 
 =head1 AUTHOR
 
