@@ -1,10 +1,8 @@
 package WebService::MorphIO;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Encode qw(encode_utf8);
 use Error::Pure qw(err);
@@ -13,7 +11,6 @@ use LWP::Simple qw(get);
 use URI;
 use URI::Escape qw(uri_escape);
 
-# Version.
 our $VERSION = 0.04;
 
 # Constructor.
@@ -171,11 +168,9 @@ Constructor.
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use File::Temp qw(tempfile);
  use Perl6::Slurp qw(slurp);
  use WebService::MorphIO;
